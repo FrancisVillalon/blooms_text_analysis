@@ -1,3 +1,9 @@
 version https://git-lfs.github.com/spec/v1
 oid sha256:42afdc378a0ea084b6f2a67cbd846d75c1bf494689b21ca69533400af1188768
 size 179
+**/.DS_Store
+**/__pycache__/
+archive.nosync/
+config/db-config.toml
+webscraper/*_chunks.nosync/
+database/other_data/process_output/
