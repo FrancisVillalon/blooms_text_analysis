@@ -28,3 +28,8 @@ The hypothesis is therefore, the more complex the task defined in a job posting,
 
 We can then use the concepts described in bloom's taxonomy to explore what defines a complex task and subsequently explore the relationship between
 complex tasks in job postings and job compensation or position.
+
+# Assumptions and Limitations
+1. All job postings being analyzed will strictly be in english. Characters or words in other languages will be ignored.
+2. The focus of the project is on Bloom's Taxonomy so other factors in determining the difficulty/complexity of a job will not be considered.
+3. There does not exist a definitive list of blooms taxonomy terms and as such the list of terms defined in this project is by no means definitive
