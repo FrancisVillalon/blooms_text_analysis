@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e6166b8f3deaebed7e2efc0fa87b99fd38dd533febed78f39484146df42369ac
-size 379
+import tomllib
+import psycopg
+
+
+with open("./config/db-config.toml", "rb") as f:
+    data = tomllib.load(f)
+    db_user = data["database"]["db_user"]
+    db_secret = data["database"]["db_pass"]
+    db_name = data["database"]["db_name"]
+
+
+def create_conn():
+    conn = psycopg.connect(dbname=db_name, user=db_user, password=db_secret)
+    cur = conn.cursor()
+    return conn, cur
