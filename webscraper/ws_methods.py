@@ -2,7 +2,6 @@ from webscraper.ws import *
 from multiprocessing import Pool
 import pandas as pd
 import traceback
-from database.db_conn import create_conn
 import pandas.io.sql as sqlio
 import sys
 import os

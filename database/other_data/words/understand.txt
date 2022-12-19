@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:920f85ec3878a474af5b8ba35e3bbb36df0d633764949c86eb6287fa1467ce32
-size 80
+translate
+paraphrase
+discuss
+report
+locate
+generalize
+explain
+classify
+summarize

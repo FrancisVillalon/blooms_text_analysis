@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:50427e434d12ac7918c9efcaad2d46c21873805578d2c3ba7aa1cfde837f7830
-size 131
+analyze
+question
+differentiate
+experiment
+examine
+test
+categorize
+distinguish
+calculate
+contrast
+outline
+infer
+discriminate
+compare

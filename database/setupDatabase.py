@@ -38,7 +38,7 @@ with psycopg.connect(dbname=db_name, user=db_user, password=db_secret) as conn:
             cur.execute(
                 f"""
                 CREATE TABLE IF NOT EXISTS {word_category}_keywords (
-                    keywords text unique
+                    keywords text unique primary key
                 ) 
                 """
             )
@@ -57,7 +57,7 @@ with psycopg.connect(dbname=db_name, user=db_user, password=db_secret) as conn:
         cur.execute(
             f"""
             CREATE TABLE IF NOT EXISTS job_levels (
-                job_title text unique,
+                job_title text unique primary key,
                 job_level int
 
             )
@@ -79,7 +79,7 @@ with psycopg.connect(dbname=db_name, user=db_user, password=db_secret) as conn:
         cur.execute(
             f"""
             CREATE TABLE IF NOT EXISTS job_postings (
-                job_link text unique,
+                job_link text unique primary key,
                 job_text text,
                 last_posted_date date,
                 address text,

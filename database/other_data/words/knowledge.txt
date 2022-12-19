@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d2e265a809e66acbf05a9b6cc135bc011f5ff27e47ae10f908e922872e665343
-size 43
+list
+define 
+recall
+state
+label
+repeat
+name
