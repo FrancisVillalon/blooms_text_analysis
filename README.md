@@ -2,6 +2,8 @@
 
 This project was created to explore and determine if any significant relationship between job seniority, job pay etc. and concepts used in Bloom's Taxanomy.
 
+This project is a work in progress.
+
 # Background
 
 Bloom's taxnomy was developed to provide a common language for teachers to discuss and exchange learning and assessment methods.
