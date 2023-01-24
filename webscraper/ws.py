@@ -11,16 +11,29 @@ import pandas as pd
 import re
 import string
 import os
-from webdriver_manager.chrome import ChromeDriverManager
+
+# from webdriver_manager.chrome import ChromeDriverManager
 import uuid
 
 
 class BloomsTextScraper:
     def __init__(self):
-        self.driver = uc.Chrome(version_main=107)
+        self.driver = uc.Chrome(version_main=109)
 
     def get_job_posting_page(self, url):
         self.driver.get(url)
+
+    def get_element(self, ele_xpath, link):
+        self.driver.get(link)
+        try:
+            WebDriverWait(self.driver, 30).until(
+                EC.presence_of_element_located((By.XPATH, ele_xpath))
+            )
+        except TimeoutException:
+            print("Waited too long.")
+            return
+        ele_text = self.driver.find_element("xpath", ele_xpath).text
+        return ele_text
 
     def get_page_text(self):
         try:
@@ -98,7 +111,7 @@ class BloomsTextScraper:
 # The scrapping class used to get job posting links
 class BloomsWebScraper:
     def __init__(self, positionLevel):
-        self.driver = uc.Chrome(version_main=107)
+        self.driver = uc.Chrome(version_main=109)
         self.positionLevel = positionLevel
 
     def get_target_url(self, n):

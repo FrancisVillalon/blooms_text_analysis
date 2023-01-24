@@ -5,8 +5,12 @@ from datetime import datetime, date
 pd.set_option("display.max_columns", None)
 TEXT_OUT_PATH = "./database/other_data/process_output/consolidated_text/"
 LINK_OUT_PATH = "./database/other_data/process_output/consolidated_link/"
+MISC_OUT_PATH = "./database/other_data/process_output/consolidated_misc/"
+print("=> Processing chunk data.")
 
-print("=> Processing text and link chunk data.")
+
+# All data is being outputted and saved as csv , parquet is faster and more efficient.
+# Requires refactor
 
 
 def consolidate_chunks(chunk_path, chunktype):
@@ -35,6 +39,15 @@ def consolidate_chunks(chunk_path, chunktype):
                 os.path.join(OUT_PATH, f"consolidated_link_{date.today()}.csv"),
                 index=False,
             )
+        case "misc":
+            OUT_PATH = MISC_OUT_PATH
+            mframe = mframe.dropna(subset="job_link")
+            mframe = mframe.drop_duplicates(subset="job_link")
+            mframe = mframe.reset_index(drop=True)
+            mframe.to_parquet(
+                os.path.join(OUT_PATH, f"consolidated_misc_{date.today()}.parquet")
+            )
+
     return mframe
 
 
